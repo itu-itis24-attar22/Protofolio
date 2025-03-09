@@ -1,0 +1,140 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+/* Game Interface */
+#game-board {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transform-origin: center;
+}
+
+.card.revealed {
+    background-color: #e0ffe0; /* Light green when revealed */
+}
+
+.card span {
+    display: none; /* Hide the letter by default */
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+}
+
+.card img {
+    display: none; /* Hide the image by default */
+    width: 60px;
+    height: 60px;
+}
+
+/* Heart Display */
+#lives {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.heart {
+    width: 30px;
+    height: 30px;
+}
+
+/* Score and Feedback */
+#score, #prediction-feedback {
+    font-size: 20px;
+    margin: 10px;
+    font-weight: bold;
+}
+
+#score {
+    color: #2c3e50;
+}
+
+#prediction-feedback {
+    color: #e74c3c; /* Default red */
+}
+
+#prediction-feedback.win {
+    color: green;
+}
+
+#prediction-feedback.loss {
+    color: red;
+}
+
+/* Input and Buttons */
+#prediction-input {
+    padding: 10px;
+    font-size: 18px;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+#submit-button, #reset-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#submit-button:hover, #reset-button:hover {
+    background-color: #2980b9;
+}
+
+#reset-button {
+    display: none; /* Hide the reset button by default */
+    margin-top: 20px;
+}
+
+/* Game Over and Win Styles */
+#prediction-feedback.win {
+    color: green;
+}
+
+#prediction-feedback.loss {
+    color: red;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #game-board {
+        flex-direction: column; /* Stack cards vertically on small screens */
+        gap: 15px;
+    }
+
+    #prediction-input {
+        width: 80%; /* Make the input field responsive */
+    }
+}

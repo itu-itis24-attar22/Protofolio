@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function displayDateAndGreeting() {
+            const today = new Date();
+            const hours = today.getHours();
+            const date = today.toLocaleDateString();
+            const greeting = hours < 12 ? "Good Morning!" : hours < 18 ? "Good Afternoon!" : "Good Evening!";
+            document.getElementById('date-greeting').innerHTML = `${greeting} Today is ${date}.`;
+        }
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        document.addEventListener("DOMContentLoaded", displayDateAndGreeting);
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Homepage</h1>
+        <button onclick="toggleTheme()" class="theme-button">Switch Theme</button>
+    </header>
+
+    <div class="container">
+        <div id="date-greeting" style="text-align: center; margin-bottom: 20px; font-style: italic; color: #4CAF50;"></div>
+
+        <div class="photo">
+            <img src="personal photo.png" alt="My Photo">
+        </div>
+
+        <div class="section">
+            <h2>Personal Introduction</h2>
+            <p>Hi, I'm Najib, a passionate computer engineering student who loves exploring new ideas and creating meaningful projects.</p>
+        </div>
+
+        <div class="section">
+            <h2>Academic Interests</h2>
+            <p>I am particularly interested in the intersection of technology and problem-solving, with a focus on computer programming and systems design. I enjoy learning about topics like software development, data structures, and electronics.</p>
+        </div>
+
+        <div class="skills section">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Languages:</strong> Python, C, C++</li>
+                <li><strong>Web Development:</strong> HTML, CSS, JavaScript</li>
+                <li><strong>Tools:</strong> Git, VS Code, Microsoft Word, Microsoft Excel, Microsoft PowerPoint</li>
+                <li><strong>Other:</strong> Problem Solving, Team Collaboration</li>
+            </ul>
+        </div>
+
+        <div class="experience section">
+            <h2>Experience</h2>
+            <ul>
+                <li><strong>Volunteer Work</strong><br>
+                    Collaborated in team-based projects, assisting with organizing events, activities, and community engagement.
+                </li>
+            </ul>
+        </div>
+
+        <div class="education section">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>Computer Engineering</strong> - Istanbul Technical University, 2022-Present<br>
+                    Key subjects: Programming, Computer Science, Mathematics
+                </li>
+                <li><strong>Online Course in Machine Learning</strong> - Coursera, 2024<br>
+                    Topic: Machine Learning
+                </li>
+            </ul>
+        </div>
+
+        <div class="contact section">
+            <h2>Contact</h2>
+            
+            <p>
+                <a href="mailto:attar22@itu.edu.tr" class="email-link">
+                    <img src="Email.png" alt="Email" class="icon">
+                    <span class="email-text">Email</span>
+                </a>
+            </p>
+            <p class="note">Click to open your email client and send a message</p>
+            
+            <p>
+                <a href="https://www.linkedin.com/in/najeeb-attar-02a699268/" target="_blank" class="linkedin-link">
+                    <img src="linkedin.png" alt="LinkedIn" class="icon">
+                    <span class="linkedin-text">LinkedIn Profile</span> <!-- Keep only this span -->
+                </a>
+            </p>
+            <p class="note">Click to visit my LinkedIn profile</p>
+        </div>
+        <div class="center-container">
+            <p class="message">If you want to have fun, click below to play!</p>
+            <a href="game/game.html" class="nav-button" target="_blank">Go to Word Prediction Game</a>
+        </div>                         
+</body>
+</html>

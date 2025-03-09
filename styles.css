@@ -1,0 +1,265 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.theme-button {
+    background-color: white;
+    color: #4CAF50;
+    border: 2px solid #4CAF50;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #f4f4f9;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Date and Greeting Section */
+#date-greeting {
+    font-size: 1.2rem;
+    text-align: center;
+    font-style: italic;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.photo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4CAF50;
+}
+
+/* Section Titles */
+.section {
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+    color: #4CAF50;
+}
+
+/* Lists */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+/* Button Styles */
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-container a {
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button-container a:hover {
+    background-color: #45a049;
+}
+
+/* Contact Section */
+.contact {
+    margin-top: 30px;
+}
+
+.contact h2 {
+    color: #4CAF50;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.contact a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.contact a:hover {
+    color: #4CAF50;
+}
+
+.contact img.icon {
+    width: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.contact span {
+    vertical-align: middle;
+}
+
+.contact .note {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 5px;
+    font-style: italic;
+    margin-left: 30px;  
+}
+
+.contact p {
+    margin-bottom: 15px; 
+}
+
+.contact a.email {
+    display: inline-block;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .photo img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .contact p {
+        font-size: 1rem;
+    }
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #f4f4f9;
+}
+
+.dark-mode header {
+    background-color: #4CAF50; /* Keeping original header color */
+    color: white;
+}
+
+.dark-mode .container {
+    background: #444; /* Slightly lighter background for contrast */
+    color: #f4f4f9;
+}
+
+.dark-mode .section h2 {
+    color: #90e84f; /* Light green for section titles */
+}
+
+.dark-mode ul {
+    color: #f4f4f9;
+}
+
+.dark-mode .button-container a {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.dark-mode .button-container a:hover {
+    background-color: #45a049;
+}
+.message {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0; /* Remove any padding if present */
+    background: none; /* No background box */
+    border: none; /* Remove border */
+}
+
+/* Navigation button style */
+.nav-button {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg, #4CAF50, #45a049);
+    border: none; /* Remove border */
+    border-radius: 30px; /* Rounded button */
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth hover effects */
+}
+
+/* Hover effect for the navigation button */
+.nav-button:hover {
+    background: linear-gradient(90deg, #45a049, #4CAF50); /* Reverse gradient */
+    transform: translateY(-3px); /* Lift effect */
+}
+
+/* Container to center the message and button on the page */
+.center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 1vh;
+    background-color: #f9f9f9; /* Light background color */
+    padding: 20px;
+    text-align: center;
+    border-top: 4px solid #4CAF50; 
+    box-shadow: none; 
+}

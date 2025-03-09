@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Prediction Memory Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Word Prediction Memory Game</h1>
+
+    <!-- Display Score and Lives -->
+    <div id="game-info">
+        <p>Score: <span id="score">0</span></p>
+        <p>Lives: <span id="lives"></span></p> <!-- Heart images will be dynamically added here -->
+    </div>
+
+    <div id="game-board">
+        <!-- Cards will be added dynamically using JavaScript -->
+    </div>
+    
+    <!-- Input field for player prediction -->
+    <div>
+        <input type="text" id="prediction-input" placeholder="Enter your guess (letter or word)" />
+        <button onclick="checkPrediction()">Submit Prediction</button>
+        <p id="prediction-feedback"></p> <!-- Display feedback to the player -->
+    </div>
+
+    <!-- Reset Game Button -->
+    <button id="reset-button" style="display: none;" onclick="resetGame()">Reset Game</button>
+
+    <!-- Include game.js script at the bottom -->
+    <script src="game.js"></script>
+</body>
+</html>
